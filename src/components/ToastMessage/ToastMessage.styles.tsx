@@ -3,10 +3,8 @@ import { getTypoStyle, Typography } from '../../styles/foundation/typo/typo'
 import { ToastMessageProps } from '../../types'
 
 export const ToastWrapper = styled.div`
-  display: flex;
   width: 100%;
   height: 100%;
-  position: relative;
 
   .toast-container {
     display: flex;

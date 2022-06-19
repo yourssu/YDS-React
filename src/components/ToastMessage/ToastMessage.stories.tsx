@@ -10,7 +10,7 @@ export default {
 
 /** !! */
 const Template: ComponentStory<typeof ToastMessage> = (args) => (
-  <div style={{ backgroundColor: '#c4c4c4eb', width: '374px', height: '400px' }}>
+  <div style={{ backgroundColor: '#c4c4c4eb', width: '374px', height: '400px', position: 'relative' }}>
     <ToastMessage {...args} />
   </div>
 )

@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { forwardRef, HtmlHTMLAttributes } from 'react'
 import { ListProps } from '../../types'
 import * as Styled from './List.styles'
 
-type Props = ListProps
+type Props = ListProps & HtmlHTMLAttributes<HTMLDivElement>
 
-export const List: React.FC<Props> = ({ subHeader, children, ...props }) => {
+const List = forwardRef<HTMLDivElement, Props>(({ subHeader, children, ...props }, ref) => {
   return (
-    <Styled.Wrapper {...props}>
+    <Styled.Wrapper ref={ref} {...props}>
       <div className="container">
         {subHeader && <Styled.SubHeader>{subHeader}</Styled.SubHeader>}
         <Styled.ListItems>
@@ -15,4 +15,6 @@ export const List: React.FC<Props> = ({ subHeader, children, ...props }) => {
       </div>
     </Styled.Wrapper>
   )
-}
+})
+
+export { List }
